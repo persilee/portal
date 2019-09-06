@@ -108,7 +108,6 @@ body {
 	height: 898px;
 }
 #banner .panel {
-	width: 500px;
 	position: absolute;
 	top: 38%;
 	left: 50%;
@@ -137,16 +136,15 @@ body {
 	color: #ababab;
 	line-height: 28px;
 }
-.main-product p.title,
-.main-service p.title {
+.main-product .title,
+.main-service .title {
 	color: #484848;
 	font-size: 24px;
 	text-align: center;
-	line-height: 160px;
 }
-.main-product p.title span,
-.main-service p.title span {
-	color: #ed0622;
+.main-product .title span,
+.main-service .title span {
+	color: #484848;
 }
 .main-product .content {
 	border: 1px solid #dedede;
@@ -238,8 +236,7 @@ body {
 
 /*底部*/
 .footer {
-	padding-bottom: 70px;
-	background: #5e6664;
+	background: #E5E5E5;
 }
 .footer .footer-web {
 	padding-top: 50px;
@@ -665,6 +662,80 @@ body {
   height: 40px;
 }
 
+.layui-container .title .info-box {
+  padding: 60px 0 120px;
+}
+.layui-container .title .info-box.service {
+    padding: 120px 0;
+}
+
+.layui-container .title .info-box .divider {
+    width: 6%;
+    height: 4px;
+    margin: 0 auto;
+    background: #ED0622;
+    margin-top: 6px;
+}
+
+.main-service .service-img-box {
+  position: relative;
+}
+
+.main-service .info-img-box {
+  height: 460px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  z-index: 2;
+  background: url('/res/static/img/img_text.png') no-repeat center;
+  background-size: 84% 84%;
+}
+
+.main-service .data-img-box {
+  height: 460px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: url('/res/static/img/img_iCloudData.png') no-repeat center;
+}
+
+.footer .footer-box {
+  padding: 46px 0;
+}
+
+.footer .footer-box .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer .footer-box .content .title {
+  font-size: 14px;
+  font-weight: 400;
+  color: #484848;
+}
+.footer .footer-box .content .item {
+  line-height: 1.6;
+}
+.footer .footer-box .content .item a{
+  font-size: 12px;
+  color: #999999;
+  margin-top: 10px;
+}
+
+.footer .footer-box .content .address-box {
+  width: 26%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.footer .footer-box .content .address-box .phone-box {
+  margin-bottom: 26px;
+}
 
 @media screen and (max-width: 480px) {
 	.main-service .content .content-right {
@@ -746,10 +817,9 @@ body {
     line-height: 80px;
     position: relative;
 	}
-	.main-product p.title,
-	.main-service p.title {
+	.main-product .title,
+	.main-service .title {
 		font-size: 36px;
-		line-height: 216px;
 	}
 	.main.product .content .content-img {
 		text-align: left;
@@ -787,7 +857,7 @@ body {
 		font-size: 24px;
 		line-height: 50px;
 	}
-	.main-about .tabJob .content p.title {
+	.main-about .tabJob .content .title {
 		font-size: 30px;
 		line-height: 90px;
 	}
