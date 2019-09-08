@@ -25,19 +25,19 @@
         <ul class="layui-nav" lay-filter="">
           <li class="layui-nav-item layui-this"><a href="index.html">首页</a></li>
           <li class="layui-nav-item">
-            <a>产品中心</a>
+            <a class="disabled">产品中心</a>
             <ul class="sub_menu">
-              <li><a href="/products/epay/page.html">公共缴费</a></li>
-              <li><a href="/products/spay/page.html">智慧医疗</a></li>
-              <li><a href="/products/ecard/page.html">智慧城市</a></li>
-              <li><a href="/products/einvoice/page.html">黑蚂蚁管家</a></li>
+              <li><a href="/html/productPlatform.html">公共事业缴费</a></li>
+              <li><a href="/html/productMedical.html">智慧医疗系统</a></li>
+              <li><a href="/html/productCity.html">智慧城市系统</a></li>
+              <li><a href="/html/productAnts.html">黑蚂蚁管家</a></li>
             </ul>
           </li>
           <li class="layui-nav-item"><a href="news.html">动态</a></li>
           <li class="layui-nav-item"><a href="case.html">案例</a></li>
           <li class="layui-nav-item">
-            <a href="about.html">关于</a>
-            <ul class="sub_menu">
+            <a class="disabled">关于</a>
+            <ul class="sub_menu about">
               <li><a href="/products/epay/page.html">公司简介</a></li>
               <li><a href="/products/spay/page.html">企业文化</a></li>
               <li><a href="/products/ecard/page.html">发展历程</a></li>
@@ -53,7 +53,7 @@
     <div class="layui-carousel" id="banner">
       <div carousel-item>
         <div>
-          <img src="../res/static/img/banner1.jpg">
+          <img src="../res/static/img/banner_home1.png">
           <div class="panel">
             <p class="title aos-init" 
             data-aos-delay="300"
@@ -69,7 +69,7 @@
           </div>
         </div>
         <div>
-          <img src="../res/static/img/banner2.jpg">
+          <img src="../res/static/img/banner_home2.png">
           <div class="panel">
             <p class="title aos-init"
               data-aos-delay="300"
@@ -256,12 +256,12 @@
             </div>
           </div>
           <div class="qrCode-box">
-            <div class="img"><img src="../res/static/img/erweima.jpg" alt=""></div>
+            <div class="img"><img src="../res/static/img/img_QRcode.png" alt=""></div>
             <div class="desc">扫码关注</div>
           </div>
         </div>
         <div class="copyright">
-
+          <div class="desc">Copyright © 2015-<div class="year"></div> All rights reserved. 粤ICP备19040895号-1</div>
         </div>
       </div>
     </div>
@@ -281,6 +281,8 @@
   layui.config({
     base: '../res/static/js/' 
   }).use('firm'); 
+  var date = new Date();
+  document.querySelector('.footer .footer-box .copyright .desc .year').innerHTML = date.getFullYear();
 </script>
 </body>
 </html>
