@@ -338,7 +338,8 @@ body {
 /** 动态 */
 .banner.news {
 	background: url(../img/nav_img3.png) no-repeat center top;
-	background-size: cover;
+  background-size: cover;
+  height: 320px;
 }
 .banner .title {
 	padding-top: 170px;
@@ -346,6 +347,9 @@ body {
 .banner .title.active {
 	padding-top: 230px;
 	transition: 1.5s;
+}
+.banner.news .title.active {
+  padding-top: 130px;
 }
 .banner .title p {
 	color: #666666;
@@ -457,7 +461,12 @@ body {
 /** 案例 */
 .banner.case {
 	background: url(../img/nav_img2.jpg) no-repeat center top;
-	background-size: cover;
+  background-size: cover;
+  height: 320px;
+}
+
+.banner.case .title.active {
+  padding-top: 130px;
 }
 .main-case {
 	padding: 30px 0 125px;
@@ -512,7 +521,11 @@ body {
 /** 关于 */
 .banner.about {
 	background: url(../img/nav_img4.jpg) no-repeat center top;
-	background-size: cover;
+  background-size: cover;
+  height: 320px;
+}
+.banner.about .title.active {
+  padding-top: 130px;
 }
 .main-about {
 	padding-bottom: 130px;
@@ -716,7 +729,8 @@ body {
 }
 
 .main-service .service-img-box {
-	position: relative;
+  position: relative;
+  padding-bottom: 160px;
 }
 
 .main-service .info-img-box {
@@ -736,8 +750,8 @@ body {
 	position: absolute;
 	top: 0;
 	z-index: 1;
-	background: url('/res/static/img/img_iCloudData.png') no-repeat;
-	background-position-x: 46%;
+	background: url('/res/static/img/img_sever.png') no-repeat;
+	background-position-x: 45%;
 	background-position-y: 100%;
 }
 
@@ -771,7 +785,28 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.footer .footer-box .content .address-box::before{
+    content: "";
+    position: absolute;
+    left: -20%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #CCCCCC;
+}
+
+.footer .footer-box .content .address-box::after{
+    content: "";
+    position: absolute;
+    right: -20%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #CCCCCC;
 }
 
 .footer .footer-box .content .address-box .phone-box {
@@ -1033,7 +1068,12 @@ body {
 }
 
 .main-news .news-content-box .content-box {
-	margin-top: 36px;
+  margin-top: 36px;
+  max-width: 1240px;
+}
+
+.main-news .news-content-box .content-box img {
+  max-width: 1240px;
 }
 
 .main-news .news-content-box .content-box p {
